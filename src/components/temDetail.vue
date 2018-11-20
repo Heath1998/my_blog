@@ -32,13 +32,13 @@
                 </div>
                 <el-row :class="pdonate?'donate-body':'donate-body donate-body-show'" :gutter="30">
                     <el-col  :span="8" :offset="4"  class="donate-item">
-                        <img src="https://diygod.b0.upaiyun.com/2016-08-25_wxd.png" alt="">
+                        <img src="" alt="no">
                         <div class="donate-tip">
                             微信扫一扫，向我赞赏
                         </div>
                     </el-col>
                     <el-col :span="8"  class="donate-item">
-                        <img src="https://diygod.b0.upaiyun.com/2016-08-25_wxd.png" alt="">
+                        <img src="" alt="no">
                         <div class="donate-tip">
                             微信扫一扫，向我赞赏
                         </div>

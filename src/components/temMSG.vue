@@ -11,7 +11,7 @@
         <section>
             <h2>可以畅所欲言</h2>
             <div class="">
-                <img src="../img/message0.jpg" alt="">
+                <img src="../../static/img/message0.jpg" alt="">
             </div>
         </section>
     </div>

@@ -24,7 +24,7 @@
                     <li class="tmsg-c-item" v-for="(commentItem,index) in commentList" :key="index">
                         <article class="">
                             <header>
-                                <img  src="../img/tou.jpg"  onerror="this.onerror=null;this.src='src/img/tou.jpg'">
+                                <img  src="../../static/img/tou.jpg"  onerror="this.onerror=null;this.src='../../static/img/tou.jpg'">
                                 <div class="i-name">
                                    {{commentItem.user}}
                                 </div>
@@ -46,7 +46,7 @@
                             <li class="tmsg-c-item" v-for="(replyItem,rindex) in commentItem.childernTextArrary" :key="rindex">
                                 <article class="">
                                     <header>
-                                            <img src="../img/tou.jpg"  onerror="this.onerror=null;this.src='src/img/tou.jpg'">
+                                            <img src="../../static/img/tou.jpg"  onerror="this.onerror=null;this.src='../../static/img/tou.jpg'">
                                             <div class="i-name">
                                                 {{replyItem.user}} <span>回复</span> {{replyItem.userReply}}
                                             </div>
@@ -228,6 +228,9 @@ import axios from 'axios';
                 this.visitorLocalStorageId = Math.ceil(Math.random()*10000);
                 this.visitorLocalStorageId = "游客" + this.visitorLocalStorageId;
                 localStorage.setItem("visitorID", this.visitorLocalStorageId);
+                this.visitorLocalStorageId = localStorage.getItem("visitorID");
+            }
+            else {
                 this.visitorLocalStorageId = localStorage.getItem("visitorID");
             }
         },

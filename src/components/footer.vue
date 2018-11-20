@@ -14,7 +14,7 @@
                 © 2018 <a href="https://archive.anotherhome.net/">Anotherhome</a>. 由 <a href="#">Vue</a> 强力驱动. Theme By <a href="https://archive.anotherhome.net/">Amativeness</a>. <a href="#">站点地图</a>. 
             </p>
             <p>
-                <span>HH</span> <img class="fheart" src="@/img/heart02.png"/>  <span>HH.</span>
+                <span>HH</span> <img class="fheart" src="../../static/img/heart02.png"/>  <span>HH.</span>
             </p>
         </div>
     </div>
@@ -75,7 +75,7 @@
     width: 100!important;
 }
 .footBack .footer-img{
-    background:url(../img/footer01.png) no-repeat 50%;
+    background:url(../../static/img/footer01.png) no-repeat 50%;
     height:368px;
     z-index: 2;
     position: absolute;

@@ -108,7 +108,12 @@ export default {
                         type:"success",
                         message:"请去邮箱激活"
                     });
-                    
+                }
+                else {
+                    this.$message({
+                        type:"info",
+                        message:"邮箱已注册"
+                    })
                 }
             });
         },

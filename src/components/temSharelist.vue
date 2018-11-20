@@ -7,7 +7,7 @@
             </span>
             <header>
                 <h1>
-                    <a href="#/DetailShare" target="_blank">
+                    <a :href="'#/DetailShare?aid='+item.aid" target="_blank">
                         {{item.title}}
                     </a>
                 </h1>

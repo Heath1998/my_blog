@@ -58,10 +58,16 @@
                                         <el-menu-item index="">仿MVVM小框架</el-menu-item>
                                         <el-menu-item index="">简历模板</el-menu-item>
                                      </el-submenu>
-                                     <el-menu-item index="/Reward">赞赏</el-menu-item>
-                                     <el-menu-item index="/Friendslink">伙伴</el-menu-item>
                                      <el-menu-item index="/Message">留言板</el-menu-item>
                                      <el-menu-item index="/Aboutme">关于</el-menu-item>
+                                     <div  v-show="!haslogin">
+                                        <el-menu-item index="/login?login=1">登陆</el-menu-item>
+                                        <el-menu-item index="/login?login=2">注册</el-menu-item>
+                                    </div>
+                                     <div  v-show="haslogin">
+                                        <el-menu-item index="/Userinfo/baseinfo">用户中心</el-menu-item>
+                                        <el-menu-item index="/" @click="UserLogout">登出</el-menu-item>
+                                    </div>
                                 </el-menu>
                             </el-collapse-transition>
                             <div class="searchBox">
@@ -93,7 +99,7 @@
             </div>
         </div>
         <div :class="gotoTop?'toTop':'toTop goTop'" @click="toTopfun">
-            <img src="../img/scroll.png" alt="">
+            <img src="../../static/img/scroll.png" alt="">
         </div>
     </div>
 </template>
@@ -403,7 +409,7 @@ import {	Typeit } from '@/utils/plug.js'
 .headImgBox{
     height:650px;
     position: relative;
-    background-image: url(https://diygod.b0.upaiyun.com/header-sagiri.jpg);
+    background-image: url(../../static/img/header-sagiri.jpg);
     width:100%;
     background-size: cover;
     background-position: center 50%;

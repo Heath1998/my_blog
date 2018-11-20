@@ -2,7 +2,7 @@
     <div class="rightlistBox">
         <section >
             <div class="r1-head">
-                <img src="https://diygod.b0.upaiyun.com/snjz.jpg" alt="">
+                <img src="../../static/img/snjz.jpg" alt="">
                 <h1>
                     <span>理智的</span>Heath
                 </h1>
@@ -71,13 +71,17 @@ import axios from 'axios';
                 })
             },
             addFavour() {
-                axios.get('/api/addfavour')
-                .then((res) => {
-                    if(res.data.succcess) {
-                    
-                    }
-                    this.data_num +=  1;
-                })
+                if(!localStorage.getItem("favour")){
+                    axios.get('/api/addfavour')
+                    .then((res) => {
+                        if(res.data.succcess) {
+                        
+                        }
+                        this.data_num +=  1;
+                    })
+                    localStorage.setItem("favour","exist")
+                }
+
             }
         },
         created() { //生命周期函数

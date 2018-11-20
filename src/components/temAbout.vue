@@ -10,9 +10,11 @@
         </header>
         <section>
             <p class="">
-                <img src="@/img/message0.jpg" alt="">
+                <img src="" alt="">
             </p>
-
+            <p>
+                一个普通的在校大学生
+            </p>
         </section>
     </div>
 </template>
